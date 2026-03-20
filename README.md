@@ -85,3 +85,6 @@ cd src
 ```
 
 
+## **Dificuldades**
+
+Acabei não conseguindo fazer o desafio surpresa, ainda não consigo fazer um sistema de login com verificação e puxar API's externas para o meu projeto;
