@@ -27,7 +27,7 @@ Sistema de gerenciamento de produtos para futura loja. Contém as propriedades d
     categoria VARCHAR(245)
  );
  ```
- Tabela:
+ ### Tabela:
 
  |Nome|Descrição|Preço|Estoque|Categoria|Ações|
  |---|---|---|---|---|---|
