@@ -31,3 +31,15 @@ export const atualizarProduto = (req,res) => {
         res.json({mensagem:'Produto atualizado com sucesso!'})
     });
 }
+
+export const excluirProduto = (req,res) => {
+
+    const { id } = req.params;
+    const sql = 'DELETE FROM produtos WHERE id=?'
+
+    db.query(sql, [id], err => {
+
+        if(err) return res.status(500).json ({erro:'Erro ao excluir produto'});
+        res.json({ mensagem:'Produto excluido com sucesso!'});
+    })
+}
