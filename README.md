@@ -88,3 +88,4 @@ cd src
 ## **Dificuldades**
 
 Acabei não conseguindo fazer o desafio surpresa, ainda não consigo fazer um sistema de login com verificação e puxar API's externas para o meu projeto;
+Pesquisei como fazer e API externas de autenticação, mas não pude garantir o funcionamento dentro do tempo limite, por isso optei por não usa-las.
