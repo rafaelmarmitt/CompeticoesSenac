@@ -1,0 +1,26 @@
+{
+  "name": "competicoessenac",
+  "version": "1.0.0",
+  "description": "Repositório para as comepetições Senac",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelmarmitt/CompeticoesSenac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/rafaelmarmitt/CompeticoesSenac/issues"
+  },
+  "homepage": "https://github.com/rafaelmarmitt/CompeticoesSenac#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0"
+  }
+}
