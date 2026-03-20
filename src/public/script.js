@@ -13,15 +13,14 @@ async function carregarProdutos() {
         const tr = document.createElement('tr')
         tr.innerHTML = `
         
-            <td>${prod.id}</td>
             <td>${prod.nome}</td>
             <td>${prod.descricao}</td>
             <td>${parseFloat(prod.preco).toFixed(2)}</td>
-            <td>${prod.estoque}</td>
+            <td>${parseInt(prod.estoque)}</td>
             <td>${prod.categoria}</td>
             <td>
-                <button onclick="editarProduto(${prod.id}, '${prod.nome}', '${prod.descricao}', ${prod.preco}, ${prod.estoque}, '${prod.categoria}')">Editar</button>
-                 <button onclick="excluirProduto(${prod.id}')">Excluir</button>
+                <button class="btn btn-primary btn-sm" onclick="editarProduto(${prod.id}, '${prod.nome}', '${prod.descricao}', ${prod.preco}, ${prod.estoque}, '${prod.categoria}')">Editar</button>
+                 <button class="btn btn-primary btn-sm" onclick="excluirProduto(${prod.id})">Excluir</button>
             </td>
         `; tabela.appendChild(tr)
     });
@@ -38,7 +37,7 @@ document.getElementById('formProdutos').addEventListener('submit', async (e) => 
     const estoque = document.getElementById('estoque').value;
     const categoria = document.getElementById('categoria').value;
 
-    const produto = { nome, descricao, preco, estoque, categoria }
+    const produto = { id, nome, descricao, preco, estoque, categoria }
 
     if (id) {
 
@@ -65,7 +64,7 @@ document.getElementById('formProdutos').addEventListener('submit', async (e) => 
 });
 
 
-function editarProduto(nome, descricao, preco, estoque, categoria) {
+function editarProduto( id, nome, descricao, preco, estoque, categoria) {
 
     document.getElementById('id').value = id;
     document.getElementById('nome').value = nome;
@@ -79,10 +78,9 @@ function editarProduto(nome, descricao, preco, estoque, categoria) {
 async function excluirProduto(id) {
 
     if (confirm('Deseja excluir este produto?')) {
-
         await fetch(`${API_URL}/${id}`, { method: 'DELETE' })
     }
     carregarProdutos();
 }
 
-    carregarProdutos();
+carregarProdutos();

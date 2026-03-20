@@ -10,27 +10,29 @@
 </head>
 
 <body>
-    <main>
+    <main class="container-sm position-absolute top-50 start-50 translate-middle position-absolute top-50 start-50 translate-middle shadow-lg p-3 mb-5 bg-body rounded ml-5 mr-5">
         <header>
             <h1>Sistema de Produtos</h1>
         </header>
-        <section class="form-section">
-            <form id="formProdutos">
-                <input type="hidden" id="id">
-                <input type="text" id="nome" placeholder="Nome">
-                <input type="text" id="descricao" placeholder="Descrição">
-                <input type="number" id="preco" placeholder="Preço">
-                <input type="number" id="estoque" placeholder="Estoque">
-                <select name="categoria" id="categoria">
+        <hr class="border border-primary border-3 opacity-75">
+        <section class="container-sm">
+            <form class="form w-50 p-3 " id="formProdutos">
+                <input class="form-control mt-2 " type="hidden" id="id">
+                <input class="form-control mt-2" type="text" id="nome" placeholder="Nome">
+                <input class="form-control mt-2" type="text" id="descricao" placeholder="Descrição">
+                <input class="form-control mt-2" type="number" id="preco" placeholder="Preço">
+                <input class="form-control mt-2" type="number" id="estoque" placeholder="Estoque">
+                <select class="form-select mt-2" name="categoria" id="categoria">
                     <option value="Pelúcia">Pelúcia</option>
                     <option value="Brinquedo">Brinquedo</option>
                     <option value="Action Figure">Action Figure</option>
                 </select>
-                <button type="submit">Salvar</button>
+                <button class="btn btn-primary mt-2" type="submit">Salvar</button>
             </form>
         </section>
+        <hr class="border border-primary border-3 opacity-75">
         <section class="list-section">
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Produto</th>
@@ -47,5 +49,4 @@
     </main>
     <script src="script.js"></script>
 </body>
-
 </html>
