@@ -26,6 +26,12 @@ Sistema de gerenciamento de produtos para futura loja. Contém as propriedades d
     estoque INT,
     categoria VARCHAR(245)
  );
+
+ Tabela:
+
+ |Nome|Descrição|Preço|Estoque|Categoria|Ações|
+ |----|-------|-----|----|-----|----|
+ |Stitch|Pelúcia stitch|99.9|20|Pelúcia| Editar/Excluir|
  ```
 
 > Acabei criando só uma tabela, pois sabia como fazer as Foreign Keys, mas não estava seguro do seu funcionamento, então optei por fazer o input das categorias via select no HTML e com tipo de charactere de texto no banco.
