@@ -1,7 +1,7 @@
 const API_URL = 'http://localhost:3000/produtos'
 
 async function carregarProdutos() {
-    
+
     const response = await fetch(API_URL)
     const produtos = await response.json();
 
@@ -27,7 +27,7 @@ async function carregarProdutos() {
     });
 }
 
-document.getElementById('formProdutos').addEventListener('submit', async(e) => {
+document.getElementById('formProdutos').addEventListener('submit', async (e) => {
 
     e.preventDefault();
 
@@ -36,15 +36,53 @@ document.getElementById('formProdutos').addEventListener('submit', async(e) => {
     const descricao = document.getElementById('descricao').value;
     const preco = document.getElementById('preco').value;
     const estoque = document.getElementById('estoque').value;
-    const categoria = document.getElementById('categoria')
+    const categoria = document.getElementById('categoria').value;
 
-    const produto = {nome, descricao, preco, estoque, categoria}
+    const produto = { nome, descricao, preco, estoque, categoria }
 
-    if(id) {
+    if (id) {
 
         await fetch(`${API_URL}/${id}`, {
 
-            
-        }) 
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(produto)
+
+        })
+    } else {
+        await fetch(API_URL, {
+
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(produto)
+
+        })
+
+    };
+    e.target.reset();
+    document.getElementById('id').value = '';
+    carregarProdutos();
+});
+
+
+function editarProduto(nome, descricao, preco, estoque, categoria) {
+
+    document.getElementById('id').value = id;
+    document.getElementById('nome').value = nome;
+    document.getElementById('descricao').value = descricao;
+    document.getElementById('preco').value = preco;
+    document.getElementById('estoque').value = estoque;
+    document.getElementById('categoria').value = categoria;
+
+};
+
+async function excluirProduto(id) {
+
+    if (confirm('Deseja excluir este produto?')) {
+
+        await fetch(`${API_URL}/${id}`, { method: 'DELETE' })
     }
-})
+    carregarProdutos();
+}
+
+    carregarProdutos();
