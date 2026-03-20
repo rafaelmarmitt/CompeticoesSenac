@@ -39,7 +39,7 @@ Sistema de gerenciamento de produtos para futura loja. Contém as propriedades d
 
 Criei o front somente com HTML e bootsrap para a estilização, ele se conecta com a API do back via fetch(API_URL), onde ele puxa os dados e manipula eles em contato com o banco de dados.
 
-![Tela](C:\Users\RAFAELBROCHIERMARMIT\Documents\GitHub\CompeticoesSenac\img\print.png)
+![Tela](C:/Users/RAFAELBROCHIERMARMIT/Documents/GitHub/CompeticoesSenac/img/print.png)
 
 ## **API** 
 
