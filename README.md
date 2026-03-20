@@ -47,7 +47,7 @@ Fiz somente um endpoint, pois no momento ainda não sei integrar mais de um endp
 ## Execução do Projeto
 
 Passo 1: 
-> Instalar o npm e suas dependências
+Instalar o npm e suas dependências
 
 ```js
 npm init -y
@@ -55,7 +55,7 @@ npm init -y
 npm install express mysql2 dotenv
 ```
 
-> Fazer o banco de dados:
+Fazer o banco de dados:
 
 ``` sql
 CREATE DATABASE sistema_produtos;
@@ -72,7 +72,7 @@ CREATE DATABASE sistema_produtos;
  );
 ```
 
-> Após isso é so iniciar o servidor via terminal:
+Após isso é so iniciar o servidor via terminal:
 
 ```js
     node server.js
